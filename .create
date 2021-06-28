@@ -1,0 +1,8 @@
+#!/bin/bash
+PROBLEM=$1
+DIR=$(pwd)
+cp -r ../../template $DIR
+mv template $1
+cd $1
+mv PROBLEM_NAME.cpp $1.cpp
+sed -i s/PROBLEM_NAME/$1/g makefile
